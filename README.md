@@ -2,12 +2,17 @@
 
 This repository contains the R code and data required to reproduce the simulation study and real-data analysis presented in:
 
-Yun, S. (2026). Multiple Testing for Spatial Extremes with Application to Reanalysis Data Evaluation. *Journal of Computational and Graphical Statistics*.
+Yun, S., Li, B., and Zhang, X. (2026). Multiple Testing for Spatial Extremes with Application to Reanalysis Data Evaluation. *Journal of Computational and Graphical Statistics (Under Revision)*.
 
 ---
 
 # Repository Structure
-. ├── Climate Data/ ├── Functions/ ├── R/ ├── Simulated Data/ └── README.md
+.
+├── Climate Data/
+├── Functions/
+├── R/
+├── Simulated Data/
+└── README.md
 ---
 
 ## 1. Climate Data
