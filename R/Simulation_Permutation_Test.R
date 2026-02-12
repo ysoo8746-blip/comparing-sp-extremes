@@ -44,14 +44,14 @@ seed = as.integer(8*ii)
 print(class(seed))
 
 cov <- 'whitmat'
-r0 <- 1
+r0 <- 3
 s0 <- 0.2
 
 ######################################
 ### Simulate Max-Stable Data
 #######################################
 ## load the actual precipitation of ERA5 and observation 
-load('Climate Data/Winter_AnnualMax_Precip0.Rdata') 
+load('/Data/Winter_AnnualMax_Precip0.Rdata') 
 
 loc = as.matrix(loc)
 n.obs = ncol(annualmax_precip_obs)-2; 
@@ -71,7 +71,7 @@ data2 <- rmaxstab(n.obs, loc, cov.mod = cov, nugget = 0,range =r0, smooth = s0)
 ########################################################################
 ### Example : Moderate signal of scale parameter difference
 ### Load simulated data
-load('Simulated Data/SimData_Scalediff_K2_P35.Rdata') 
+load('/Data/Simulated Data/SimData_Scalediff_K2_P35.Rdata') 
 
 delta.tr = Param_SimX$delta
 param.loc.p0 = Param_SimX$loc; param.scale.p0 = Param_SimX$scale; param.shape.p0 = Param_SimX$shape
@@ -269,4 +269,4 @@ if(class(BiParam_12)=="try-error"){BiParam_12 <- NA}
 
 save(rt.diff.GEVP,param.diff.GEVP, pvalP, pval.param.each,BiParam_2,BiParam_4,BiParam_12
      , BiP10_2,BiP10_4,BiP10_12, BiP50_2, BiP50_4,BiP50_12
-     ,file = paste0("Result/Scale_Rt_Size2Diff_P33_R3S0.2B9_Sig2/MLEP_ScaleRt_CauchyN4N12R3S0.2_", ii ,".Rdata"))
+     ,file = paste0("/Data/Simulated Data/Permutation_Test_Result/Scale_Moderate/MLEP_ScaleRt_CauchyN4N12R3S0.2_", ii ,".Rdata"))

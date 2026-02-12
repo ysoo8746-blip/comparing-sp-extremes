@@ -78,19 +78,19 @@ G.Shape_N4_12 = My_GG_MultiTest(Shape_ResOpt_4,  Shape_ResOpt_12, "Shape", Metho
 ############ Parameter and return level estimation ############ 
 ##### ---- Figure 3 : Scale Difference ----- ####
 # Weak Signal
-setwd('Result/Scale_Rt_Size2Diff_P33_R3S0.2B9_Sig2')
+setwd('/Data/Simulated Data/Permutation_Test_Result/Scale_Rt_Size2Diff_P33_R3S0.2B9_Sig2')
 datafile_names0 = list.files();load(datafile_names0[7])
 R10_Scale_diff_Weak = rt.diff.GEVP[,2];R50_Scale_diff_Weak = rt.diff.GEVP[,4] ## j = 1/ j = 7
 Scale_diff_Weak = param.diff.GEVP[,2] # j = 8
 
 # Moderate Signal 
-setwd('Result/Scale_Rt_Size2Diff_P33_R3S0.2B9_Sig2.5')
+setwd('/Data/Simulated Data/Permutation_Test_Result/Scale_Rt_Size2Diff_P33_R3S0.2B9_Sig2.5')
 datafile_names0 = list.files();load(datafile_names0[7])
 R10_Scale_diff_Moderate = rt.diff.GEVP[,2];R50_Scale_diff_Moderate = rt.diff.GEVP[,4] ## j = 1/ j = 7
 Scale_diff_Moderate = param.diff.GEVP[,2] # j = 8
 
 # Strong Signal 
-setwd('Result/Scale_Rt_Size2Diff_P33_R3S0.2B9_Sig3')
+setwd('/Data/Simulated Data/Permutation_Test_Result/Scale_Rt_Size2Diff_P33_R3S0.2B9_Sig3')
 datafile_names0 = list.files();load(datafile_names0[7])
 R10_Scale_diff_Strong = rt.diff.GEVP[,2];R50_Scale_diff_Strong = rt.diff.GEVP[,4] ## j = 1/ j = 7
 Scale_diff_Strong = param.diff.GEVP[,2] # j = 8
@@ -164,19 +164,19 @@ RT_scalediff = ggplot(plot_df, aes(x = loc_id, y = diff)) +
 
 ##### ---- Figure 5 : Shape Difference ----- ####
 # Weak signal
-setwd('Result/Shape_Rt_Size2Diff_P33_R3S0.2B9_Sig0.8')
+setwd('/Data/Simulated Data/Permutation_Test_Result/Shape_Rt_Size2Diff_P33_R3S0.2B9_Sig0.8')
 datafile_names0 = list.files();load(datafile_names0[4])
 R10_Shape_diff_Weak = rt.diff.GEVP[,2];R50_Shape_diff_Weak = rt.diff.GEVP[,4] # j =3/j= 4
 Shape_diff_Weak = param.diff.GEVP[,3] # j = 3
 
 # Moderate Signal
-setwd('Result/Shape_Rt_Size2Diff_P33_R3S0.2B9_Sig1')
+setwd('/Data/Simulated Data/Permutation_Test_Result/Shape_Rt_Size2Diff_P33_R3S0.2B9_Sig1')
 datafile_names0 = list.files();load(datafile_names0[4])
 R10_Shape_diff_Moderate = rt.diff.GEVP[,2];R50_Shape_diff_Moderate = rt.diff.GEVP[,4] # j =3/j= 4
 Shape_diff_Moderate = param.diff.GEVP[,3] # j = 3
 
 # Strong Signal 
-setwd('Result/Shape_Rt_Size2Diff_P33_R3S0.2B9_Sig1.2')
+setwd('/Data/Simulated Data/Permutation_Test_Result/Shape_Rt_Size2Diff_P33_R3S0.2B9_Sig1.2')
 datafile_names0 = list.files();load(datafile_names0[4])
 R10_Shape_diff_Strong = rt.diff.GEVP[,2];R50_Shape_diff_Strong = rt.diff.GEVP[,4] # j =3/j= 4
 Shape_diff_Strong = param.diff.GEVP[,3] # j = 3

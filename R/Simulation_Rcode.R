@@ -25,13 +25,13 @@ library(simcausal)
 #########################################
 ### Import functions 
 #########################################
-source('Functions/Nonparam_functions.R')
-source('Functions/GEVfunctions.R')
-source('Functions/Mirror_pi.R')
-source('Functions/Neigh_Function.R')
+source('/Functions/Nonparam_functions.R')
+source('/Functions/GEVfunctions.R')
+source('/Functions/Mirror_pi.R')
+source('/Functions/Neigh_Function.R')
 
 #### Import US map data #### 
-load('Climate Data/NAM_Polygon_index.Rdata')
+load('/Data/NAM_Polygon_index.Rdata')
 
 #### Set parameters #### 
 n.obs <- 60 
@@ -70,7 +70,7 @@ table(delta.tr)/n.site
 ### Generate Parameters : Fit Exp model for parameters
 ########################################################################
 ## load the actual precipitation of ERA5 and observation 
-load('Climate Data/Winter_AnnualMax_Precip0.Rdata') 
+load('/Data/Winter_AnnualMax_Precip0.Rdata') 
 
 #### Generate location parameter #### 
 sigma2 = 155; phi = 12 # based on the 
@@ -121,9 +121,9 @@ param.loc02 = Param_SimX$loc + (eval.loc %*% coeff.loc1)*k.sig*Param_SimX$delta
 Param_SimX = data.frame(loc,scale = param.scale, loc = param.loc,
                         shape = param.shape, delta = delta.tr, loc1 = param.loc02)
 
-#save(Param_SimX, file="Simulated Data/SimData_Locdiff_K1.3_P35.Rdata")
-#save(Param_SimX, file="Simulated Data/SimData_Locdiff_K1.5_P35.Rdata")
-#save(Param_SimX, file="Simulated Data/SimData_Locdiff_K1.7_P35.Rdata")
+#save(Param_SimX, file="/Data/Simulated Data/SimData_Locdiff_K1.3_P35.Rdata")
+#save(Param_SimX, file="/Data/Simulated Data/SimData_Locdiff_K1.5_P35.Rdata")
+#save(Param_SimX, file="/Data/Simulated Data/SimData_Locdiff_K1.7_P35.Rdata")
 
 #### 2. Scale signal ####
 # basis function
@@ -139,9 +139,9 @@ param.scale02 = pmax(1, param.scale02)
 Param_SimX = data.frame(loc,scale = param.scale, loc = param.loc,
                         shape = param.shape, delta = delta.tr, scale1 = param.scale02)
 
-#save(Param_SimX, file="Simulated Data/SimData_Scalediff_K2_P35.Rdata")
-#save(Param_SimX, file="Simulated Data/SimData_Scalediff_K2.5_P35.Rdata")
-#save(Param_SimX, file="Simulated Data/SimData_Scalediff_K3_P35.Rdata")
+#save(Param_SimX, file="/Data/Simulated Data/SimData_Scalediff_K2_P35.Rdata")
+#save(Param_SimX, file="/Data/Simulated Data/SimData_Scalediff_K2.5_P35.Rdata")
+#save(Param_SimX, file="/Data/Simulated Data/SimData_Scalediff_K3_P35.Rdata")
 
 #### 3. Shape signal ####
 # basis function
@@ -158,6 +158,6 @@ param.shape02 = Param_SimX$shape + (eval.sh %*% coeff.sh)*k.sig*Param_SimX$delta
 Param_SimX = data.frame(loc,scale = param.scale, loc = param.loc,
                         shape = param.shape, delta = delta.tr, shape1 = param.shape02)
 
-#save(Param_SimX, file="Simulated Data/SimData_Shapediff_K1.2_P35_2.Rdata")# k.sig = 1.2
-#save(Param_SimX, file="Simulated Data/SimData_Shapediff_K1_P35_2.Rdata")# k.sig = 1
-#save(Param_SimX, file="Simulated Data/SimData_Shapediff_K0.8_P35_2.Rdata") # k.sig = 0.8
+#save(Param_SimX, file="/Data/Simulated Data/SimData_Shapediff_K1.2_P35_2.Rdata")# k.sig = 1.2
+#save(Param_SimX, file="/Data/Simulated Data/SimData_Shapediff_K1_P35_2.Rdata")# k.sig = 1
+#save(Param_SimX, file="/Data/Simulated Data/SimData_Shapediff_K0.8_P35_2.Rdata") # k.sig = 0.8

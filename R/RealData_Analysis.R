@@ -1,12 +1,15 @@
 ##### Load Functions and data 
-setwd('/Users/syun/Baruch College Dropbox/Soo In Yun/Research/Comparing Extremes/JCGS/Rcode_Submit/Functions')
-source('General_functions.R')
-source('Nonparam_functions.R')
-source('GEVfunctions.R')
-source('Mirror_pi.R')
-source('Neigh_Function.R')
-setwd('/Users/syun/Baruch College Dropbox/Soo In Yun/Research/Comparing Extremes/JCGS/Rcode_Submit/Data')
-load('Winter_AnnualMax_Precip0.Rdata')
+source('/Functions/General_functions.R')
+source('/Functions/Nonparam_functions.R')
+source('/Functions/GEVfunctions.R')
+source('/Functions/Mirror_pi.R')
+source('/Functions/Neigh_Function.R')
+load('/Data/Winter_AnnualMax_Precip0.Rdata')
+
+# get args
+args = commandArgs(TRUE)
+ii = as.integer(args[1])
+seed = as.integer(8*ii)
 
 n.obs <- ncol(annualmax_precip_obs)-2
 n.site<- nrow(loc)
