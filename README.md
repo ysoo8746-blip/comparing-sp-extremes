@@ -7,12 +7,7 @@ Yun, S., Li, B., and Zhang, X. (2026). Multiple Testing for Spatial Extremes wit
 ---
 
 # Repository Structure
-.
-├── Climate Data/
-├── Functions/
-├── R/
-├── Simulated Data/
-└── README.md
+
 ---
 
 ## 1. Climate Data
