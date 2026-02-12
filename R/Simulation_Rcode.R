@@ -25,7 +25,6 @@ library(simcausal)
 #########################################
 ### Import functions 
 #########################################
-source('Functions/General_functions.R')
 source('Functions/Nonparam_functions.R')
 source('Functions/GEVfunctions.R')
 source('Functions/Mirror_pi.R')
